@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    __weak IBOutlet UILabel *typedegree;
+    __weak IBOutlet UILabel *degree;
+    __weak IBOutlet UIButton *temperature;
+}
 
 
 @end
