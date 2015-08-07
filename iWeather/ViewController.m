@@ -55,18 +55,18 @@
 }
 - (IBAction)Change:(id)sender {
     
-    if([typedegree.text isEqualToString:@"c"]) {
-        typedegree.text = @"k" ;
-        degree.text = @" ";
-    float i = ([_temperature.currentTitle floatValue ] +273);
+    if([typedegree.text isEqualToString:@"C"]) {
+        typedegree.text = @"F" ;
+        //degree.text = @" ";
+    float i = ([_temperature.currentTitle floatValue ]*1.8 +32);
  
     NSString* string1 = [NSString stringWithFormat:@"%2.1f", i ];
     [self.temperature setTitle:string1 forState:UIControlStateNormal];
     }
     else
-    { typedegree.text = @"c" ;
-        degree.text = @"o";
-        float i = ([_temperature.currentTitle floatValue ] -273);
+    { typedegree.text = @"C" ;
+        //degree.text = @"o";
+        float i = (([_temperature.currentTitle floatValue ] -32)/1.8);
         
         NSString* string1 = [NSString stringWithFormat:@"%2.1f", i ];
         [self.temperature setTitle:string1 forState:UIControlStateNormal];
